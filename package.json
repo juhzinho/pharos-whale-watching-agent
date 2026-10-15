@@ -1,0 +1,22 @@
+{
+  "name": "pharos-whale-watching-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "description": "Tracks configurable Pharos addresses for significant USDC/WPROS moves via Chain MCP, with a why-it-matters report and a summary of every watched wallet",
+  "scripts": {
+    "start": "node whale.js",
+    "whale": "node whale.js",
+    "test": "node --test test/whales.test.js && node test/e2e.js",
+    "test:unit": "node --test test/whales.test.js",
+    "test:e2e": "node test/e2e.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "viem": "^2.57.5"
+  }
+}

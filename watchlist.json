@@ -1,0 +1,16 @@
+{
+  "tokens": [
+    { "symbol": "USDC", "address": "0xc879c018db60520f4355c26ed1a6d572cdac1815", "min": "50" },
+    { "symbol": "WPROS", "address": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0", "min": "20" }
+  ],
+  "addresses": [
+    { "address": "0x912c9aDe24D44d8922f0866D8Dcb079f1363f647", "label": { "en": "Busiest USDC/WPROS flow", "pt": "Fluxo USDC/WPROS mais ativo" } },
+    { "address": "0x936564245B69f5a293b42cbd752E0eE3bb68b470", "label": { "en": "Second-busiest flow", "pt": "Segundo fluxo mais ativo" } },
+    { "address": "0x768B959191cE5876cabBbC014a08D72615BDdE54", "label": { "en": "Frequent USDC trader", "pt": "Trader frequente de USDC" } },
+    { "address": "0xB53F6cB429B8e14b6b87362B5a20Ba69FC9C3B47", "label": { "en": "Large USDC round-trips", "pt": "Ida-e-volta grande de USDC" } },
+    { "address": "0xA1204366ce65678872ece7F7a9eDEFe858574777", "label": { "en": "Large USDC round-trips", "pt": "Ida-e-volta grande de USDC" } },
+    { "address": "0x7927d0297e903A2AaDf617760F17a975034d0C10", "label": { "en": "Large USDC round-trips", "pt": "Ida-e-volta grande de USDC" } },
+    { "address": "0xf48Ff1e0aBc740C167049c46435E753b083bC317", "label": { "en": "Active WPROS flow", "pt": "Fluxo ativo de WPROS" } },
+    { "address": "0x4146D192Da6428c9e1C243D2A953c625B5765623", "label": { "en": "WPROS seller", "pt": "Vendedor de WPROS" } }
+  ]
+}
