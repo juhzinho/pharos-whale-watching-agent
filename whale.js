@@ -2,7 +2,7 @@
 import { readFileSync } from "node:fs";
 import { isAddress } from "viem";
 import { connect, isTransient, takeCallLog, CHAIN_MCP_URL } from "./lib/mcp.js";
-import { MAX_WINDOW } from "./lib/transfers.js";
+import { MAX_LOOKBACK } from "./lib/transfers.js";
 import { parseWatchlist } from "./lib/watchlist.js";
 import { latestBlock, presentMove, presentSummary, watchWindow } from "./lib/whales.js";
 
@@ -30,7 +30,7 @@ Options:
   --min <TOKEN=amount>   override that token's significance threshold (repeatable)
   --add <0x…>            extra address to watch (repeatable; still need ≥ 5 in total)
   --only                 ignore the default 8 and watch only the --add addresses (need ≥ 5)
-  --lookback <blocks>    initial history, 1 to ${MAX_WINDOW} (default 1000)
+  --lookback <blocks>    initial history, 1 to ${MAX_LOOKBACK} (default 1000). get_logs is paged in 1000-block windows.
   --interval <s>         seconds between live checks (default 5, minimum 2)
   --once                 scan the window, print the report and exit
   --lang en|pt           language of the report (default en)
@@ -79,8 +79,8 @@ function parseArgs(argv) {
     else fail(`Unexpected argument: ${a}`);
   }
   if (opts.interval < 2) fail("--interval must be at least 2 seconds.");
-  if (!Number.isInteger(opts.lookback) || opts.lookback < 1 || opts.lookback > MAX_WINDOW) {
-    fail(`--lookback must be an integer from 1 to ${MAX_WINDOW}.`);
+  if (!Number.isInteger(opts.lookback) || opts.lookback < 1 || opts.lookback > MAX_LOOKBACK) {
+    fail(`--lookback must be an integer from 1 to ${MAX_LOOKBACK}.`);
   }
   return opts;
 }
